@@ -14,4 +14,6 @@ print(x1)
 for(j in 1:ncol(x)){
   x1[,j]<-ifelse(is.na(x[,j]),mean(x[,j],na.rm = TRUE),x[,j])
 }
+df2<-na.omit(x1)
+print(df2)
 head(x1)
